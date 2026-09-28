@@ -1,5 +1,5 @@
 // Het server IP
-const SERVER_IP = "play.mythicrealms.nl"; // Vul hier jouw IP in
+const SERVER_IP = "play.verdantiasmp.nl"; // Vul hier jouw IP in
 
 // 1. IP kopiëren met een RPG effect
 function copyIP() {
