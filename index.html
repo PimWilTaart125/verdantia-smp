@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Realms | RPG Server</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- RPG lettertypes van Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Elegante top navigatie -->
+    <nav class="fantasy-nav">
+        <div class="nav-brand">MYTHIC REALMS</div>
+        <div class="nav-links">
+            <a href="#home">Koninkrijk</a>
+            <a href="#features">Kenmerken</a>
+            <a href="#staff">Raad van Bestuur</a>
+            <a href="#store" class="gold-link">Schatkist</a>
+        </div>
+    </nav>
+
+    <!-- Filmische Hero Header -->
+    <header id="home" class="hero-cinematic">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Een episch avontuur wacht op jou</p>
+            <h1 class="hero-title">BETREED HET RIJK</h1>
+            
+            <div class="status-text">
+                <i class="fa-solid fa-fire-flame-curved"></i> <span id="playerCount">...</span> Zielen Online
+            </div>
+
+            <!-- RPG Stijl IP Knop -->
+            <button class="btn-epic" onclick="copyIP()" id="ipBtn">
+                <span class="btn-text" id="ipText">PLAY.MYTHICREALMS.NL</span>
+                <span class="btn-hover-text">KOPIEER IP</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Informatie Sectie in perkament stijl -->
+    <section id="features" class="dark-section">
+        <div class="container text-center">
+            <h2 class="section-title">DE LEGENDE BEGINT HIER</h2>
+            <div class="divider-gold"></div>
+            
+            <div class="grid-3">
+                <div class="lore-card">
+                    <i class="fa-solid fa-dragon"></i>
+                    <h3>Epische Bazen</h3>
+                    <p>Vecht tegen custom monsters en draken in verborgen dungeons verspreid over de hele wereld. Verzamel mythische buit.</p>
+                </div>
+                <div class="lore-card">
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3>Unieke Quests</h3>
+                    <p>Volg een meeslepende verhaallijn door met NPC's te praten. Jouw keuzes beïnvloeden de toekomst van het koninkrijk.</p>
+                </div>
+                <div class="lore-card">
+                    <i class="fa-solid fa-chess-rook"></i>
+                    <h3>Bouw je Fort</h3>
+                    <p>Claim land, bouw je eigen kasteel en bescherm het tegen andere facties in grote pvp-oorlogen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Sectie (Isometrische Hoofden in Ringen) -->
+    <section id="staff" class="dark-section bg-pattern">
+        <div class="container text-center">
+            <h2 class="section-title">DE HOGE RAAD</h2>
+            <div class="divider-gold"></div>
+            <p class="section-desc">De beschermers van de server die waken over vrede en orde.</p>
+
+            <div class="staff-flex">
+                <!-- Koning (Eigenaar) -->
+                <div class="staff-portrait">
+                    <div class="portrait-ring owner-ring">
+                        <!-- We gebruiken /head/ in plaats van avatar of body voor een mooi 3D blok-effect -->
+                        <img src="https://mc-heads.net/head/Notch/120" alt="Eigenaar">
+                    </div>
+                    <h3 class="staff-name">Notch</h3>
+                    <span class="staff-title">De Koning</span>
+                </div>
+
+                <!-- Ridder (Admin) -->
+                <div class="staff-portrait">
+                    <div class="portrait-ring admin-ring">
+                        <img src="https://mc-heads.net/head/Jeb_/120" alt="Admin">
+                    </div>
+                    <h3 class="staff-name">Jeb_</h3>
+                    <span class="staff-title">Grootmeester</span>
+                </div>
+
+                <!-- Wachter (Moderator) -->
+                <div class="staff-portrait">
+                    <div class="portrait-ring mod-ring">
+                        <img src="https://mc-heads.net/head/Dinnerbone/120" alt="Moderator">
+                    </div>
+                    <h3 class="staff-name">Dinnerbone</h3>
+                    <span class="staff-title">Stadswachter</span>
+                </div>
+                
+                <!-- Leerling (Helper) -->
+                <div class="staff-portrait">
+                    <div class="portrait-ring helper-ring">
+                        <img src="https://mc-heads.net/head/Agnes/120" alt="Helper">
+                    </div>
+                    <h3 class="staff-name">Agnes</h3>
+                    <span class="staff-title">Schildknaap</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Winkel -->
+    <section id="store" class="dark-section">
+        <div class="container text-center">
+            <h2 class="section-title">DE SCHATKIST</h2>
+            <div class="divider-gold"></div>
+            <p class="section-desc">Verkrijg magische titels en krachten om jouw reis te versnellen.</p>
+
+            <div class="grid-2">
+                <div class="rank-box">
+                    <h4 class="rank-name">Ridder</h4>
+                    <div class="rank-price">10 Goudstukken <span>(€10.00)</span></div>
+                    <ul class="rank-perks">
+                        <li>Zilveren harnas in lobby</li>
+                        <li>Toegang tot de exclusieve VIP taverne</li>
+                        <li>Speciale /groet emote</li>
+                    </ul>
+                    <a href="#" class="btn-epic small">Koop Nu</a>
+                </div>
+
+                <div class="rank-box premium-box">
+                    <div class="ribbon">Legendarisch</div>
+                    <h4 class="rank-name">Drakenridder</h4>
+                    <div class="rank-price">25 Goudstukken <span>(€25.00)</span></div>
+                    <ul class="rank-perks">
+                        <li>Alles van Ridder</li>
+                        <li>Gouden aura particles</li>
+                        <li>Vlieg met je eigen huisdier draak</li>
+                        <li>Toegang tot de Geheime Smederij</li>
+                    </ul>
+                    <a href="#" class="btn-epic small">Koop Nu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fantasy-footer">
+        <div class="container">
+            <p>Mythic Realms &copy; 2026. Een onafhankelijk Minecraft avontuur.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
